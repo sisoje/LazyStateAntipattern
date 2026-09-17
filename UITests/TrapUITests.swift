@@ -2,7 +2,7 @@ import XCTest
 
 /// One script, three scenarios: one unrelated tap, then one related tap.
 /// Every step is the same; only the child that builds the model differs.
-final class ComparisonUITests: XCTestCase {
+final class TrapUITests: XCTestCase {
     // The parent's input ends at 2, so a correct child's model holds 2.
 
     /// Follows the input; one model per input value (1, 2).

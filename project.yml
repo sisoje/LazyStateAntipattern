@@ -1,9 +1,9 @@
-# Standalone comparison: the same parent input handed to three children that
-# build an @Observable model from it — @State, Point-Free's @LazyState, and a
-# memo view inlined in App/MemoView.swift (CoreFlow's MemoView, ~30 lines).
-name: LazyStateComparison
+# The lazy state trap, sprung: the same parent input handed to three children
+# that build an @Observable model from it — @State, Point-Free's @LazyState,
+# and a memo view inlined in App/MemoView.swift (CoreFlow's MemoView).
+name: LazyStateTrap
 options:
-  bundleIdPrefix: com.coreflow.comparison
+  bundleIdPrefix: com.coreflow.trap
   deploymentTarget:
     iOS: "26.0"
 packages:
@@ -11,7 +11,7 @@ packages:
     url: https://github.com/pointfreeco/swiftui-lazy-state
     from: 1.0.0
 targets:
-  ComparisonApp:
+  TrapApp:
     type: application
     platform: iOS
     sources: [App]
@@ -26,26 +26,26 @@ targets:
         SWIFT_APPROACHABLE_CONCURRENCY: YES
         SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
         CODE_SIGNING_ALLOWED: NO
-  ComparisonUITests:
+  TrapUITests:
     type: bundle.ui-testing
     platform: iOS
     sources: [UITests]
     dependencies:
-      - target: ComparisonApp
+      - target: TrapApp
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
         SWIFT_VERSION: "6.0"
         SWIFT_APPROACHABLE_CONCURRENCY: YES
         CODE_SIGNING_ALLOWED: NO
-        TEST_TARGET_NAME: ComparisonApp
+        TEST_TARGET_NAME: TrapApp
 schemes:
-  ComparisonApp:
+  TrapApp:
     build:
       targets:
-        ComparisonApp: all
+        TrapApp: all
     test:
       config: Debug
       debugEnabled: false
       targets:
-        - ComparisonUITests
+        - TrapUITests

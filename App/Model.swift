@@ -1,5 +1,4 @@
 import Observation
-import SwiftUI
 
 /// How many models have been created. Observable, not a plain `static var`:
 /// in the `@State` scenario the kept model is the same instance on every
@@ -32,15 +31,5 @@ final class Model {
     init(input: Int) {
         self.input = input
         Model.creations.increment()
-    }
-}
-
-/// What every child shows, whatever built its model.
-struct ModelRow: View {
-    let model: Model
-
-    var body: some View {
-        Text(verbatim: "model input \(model.input)")
-        Text(verbatim: "models created \(Model.creations.count)")
     }
 }

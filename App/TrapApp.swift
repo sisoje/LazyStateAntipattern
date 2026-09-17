@@ -3,7 +3,7 @@ import SwiftUI
 /// One screen, three scenarios: the UI test picks one per launch, and each
 /// scenario file carries its own `#Preview`.
 @main
-struct ComparisonApp: App {
+struct TrapApp: App {
     private let scenario = ProcessInfo.processInfo.environment["SCENARIO"]
 
     var body: some Scene {

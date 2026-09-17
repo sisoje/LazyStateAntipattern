@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8EFCCF888BC9C103E1AFC360"
-               BuildableName = "ComparisonApp.app"
-               BlueprintName = "ComparisonApp"
-               ReferencedContainer = "container:LazyStateComparison.xcodeproj">
+               BlueprintIdentifier = "5FABC7B99BEA61C00D45D069"
+               BuildableName = "TrapApp.app"
+               BlueprintName = "TrapApp"
+               ReferencedContainer = "container:LazyStateTrap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8EFCCF888BC9C103E1AFC360"
-            BuildableName = "ComparisonApp.app"
-            BlueprintName = "ComparisonApp"
-            ReferencedContainer = "container:LazyStateComparison.xcodeproj">
+            BlueprintIdentifier = "5FABC7B99BEA61C00D45D069"
+            BuildableName = "TrapApp.app"
+            BlueprintName = "TrapApp"
+            ReferencedContainer = "container:LazyStateTrap.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -44,10 +44,10 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC60F644B4100419FB3D43A5"
-               BuildableName = "ComparisonUITests.xctest"
-               BlueprintName = "ComparisonUITests"
-               ReferencedContainer = "container:LazyStateComparison.xcodeproj">
+               BlueprintIdentifier = "CBAF26C7643C382EE6AAFDEB"
+               BuildableName = "TrapUITests.xctest"
+               BlueprintName = "TrapUITests"
+               ReferencedContainer = "container:LazyStateTrap.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -68,10 +68,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8EFCCF888BC9C103E1AFC360"
-            BuildableName = "ComparisonApp.app"
-            BlueprintName = "ComparisonApp"
-            ReferencedContainer = "container:LazyStateComparison.xcodeproj">
+            BlueprintIdentifier = "5FABC7B99BEA61C00D45D069"
+            BuildableName = "TrapApp.app"
+            BlueprintName = "TrapApp"
+            ReferencedContainer = "container:LazyStateTrap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -85,10 +85,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8EFCCF888BC9C103E1AFC360"
-            BuildableName = "ComparisonApp.app"
-            BlueprintName = "ComparisonApp"
-            ReferencedContainer = "container:LazyStateComparison.xcodeproj">
+            BlueprintIdentifier = "5FABC7B99BEA61C00D45D069"
+            BuildableName = "TrapApp.app"
+            BlueprintName = "TrapApp"
+            ReferencedContainer = "container:LazyStateTrap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
