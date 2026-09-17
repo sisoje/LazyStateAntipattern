@@ -1,0 +1,51 @@
+# Standalone comparison: the same parent input handed to three children that
+# build an @Observable model from it — @State, Point-Free's @LazyState, and a
+# memo view inlined in App/MemoView.swift (CoreFlow's MemoView, ~30 lines).
+name: LazyStateComparison
+options:
+  bundleIdPrefix: com.coreflow.comparison
+  deploymentTarget:
+    iOS: "26.0"
+packages:
+  LazyState:
+    url: https://github.com/pointfreeco/swiftui-lazy-state
+    from: 1.0.0
+targets:
+  ComparisonApp:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: LazyState
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        SWIFT_VERSION: "6.0"
+        SWIFT_APPROACHABLE_CONCURRENCY: YES
+        SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+        CODE_SIGNING_ALLOWED: NO
+  ComparisonUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: ComparisonApp
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "6.0"
+        SWIFT_APPROACHABLE_CONCURRENCY: YES
+        CODE_SIGNING_ALLOWED: NO
+        TEST_TARGET_NAME: ComparisonApp
+schemes:
+  ComparisonApp:
+    build:
+      targets:
+        ComparisonApp: all
+    test:
+      config: Debug
+      debugEnabled: false
+      targets:
+        - ComparisonUITests

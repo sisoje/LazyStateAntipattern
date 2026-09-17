@@ -1,0 +1,24 @@
+{
+  "originHash" : "c46b1897bb7d5cfa77bc13de10728396f620faa446a20cf4985ba51151938d3c",
+  "pins" : [
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "79e4b74a295b6eb74a8b585e3a39d29e70c1dbd1",
+        "version" : "603.0.2"
+      }
+    },
+    {
+      "identity" : "swiftui-lazy-state",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swiftui-lazy-state",
+      "state" : {
+        "revision" : "7cad85dca592cd605f15db2279cdb9efe96aea50",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
