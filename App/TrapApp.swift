@@ -9,9 +9,9 @@ struct TrapApp: App {
     var body: some Scene {
         WindowGroup {
             switch scenario {
-            case "state": Parent { StateChild(input: $0) }
-            case "lazyState": Parent { LazyStateChild(input: $0) }
-            default: Parent { MemoChild(input: $0) }
+            case "state": ParentView { StateChild(input: $0) }
+            case "lazyState": ParentView { LazyStateChild(input: $0) }
+            default: ParentView { MemoChild(input: $0) }
             }
         }
     }

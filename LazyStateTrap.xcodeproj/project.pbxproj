@@ -15,7 +15,7 @@
 		8863B0CC7970011B433A9286 /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841F074E9A00415675F4CB4 /* MemoView.swift */; };
 		90D982AE3678217B89A5B5FE /* TrapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4E13A7279430B52DC200C /* TrapApp.swift */; };
 		98DCE80A1D075F3341923FDF /* TrapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92015F4FBA4E7E9017CD109D /* TrapUITests.swift */; };
-		9E36CEC9C99743F00C474B50 /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CDFACDC472E08AB4B47B5 /* Parent.swift */; };
+		AD232BE807D691ACA7BA2489 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CF1A079C639D4E928336C /* ParentView.swift */; };
 		CA538FEA177AA141F945C9D6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B44D63C2AE0CDAC1CFFEEC /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		196B85B5D270BE8BA5E67510 /* StateScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateScenario.swift; sourceTree = "<group>"; };
+		227CF1A079C639D4E928336C /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		3220EF4F5991E3DA2D310CA3 /* MemoScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoScenario.swift; sourceTree = "<group>"; };
 		3BB27BD8A03CFE418163A855 /* LazyStateScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyStateScenario.swift; sourceTree = "<group>"; };
 		44E4E13A7279430B52DC200C /* TrapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapApp.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		91B44D63C2AE0CDAC1CFFEEC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		92015F4FBA4E7E9017CD109D /* TrapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapUITests.swift; sourceTree = "<group>"; };
 		C841F074E9A00415675F4CB4 /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
-		F70CDFACDC472E08AB4B47B5 /* Parent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				C841F074E9A00415675F4CB4 /* MemoView.swift */,
 				91B44D63C2AE0CDAC1CFFEEC /* Model.swift */,
 				855B77084697190C5681C76B /* ModelRow.swift */,
-				F70CDFACDC472E08AB4B47B5 /* Parent.swift */,
+				227CF1A079C639D4E928336C /* ParentView.swift */,
 				196B85B5D270BE8BA5E67510 /* StateScenario.swift */,
 				44E4E13A7279430B52DC200C /* TrapApp.swift */,
 			);
@@ -183,7 +183,7 @@
 				8863B0CC7970011B433A9286 /* MemoView.swift in Sources */,
 				CA538FEA177AA141F945C9D6 /* Model.swift in Sources */,
 				1DFB193D15458AB5D6298E47 /* ModelRow.swift in Sources */,
-				9E36CEC9C99743F00C474B50 /* Parent.swift in Sources */,
+				AD232BE807D691ACA7BA2489 /* ParentView.swift in Sources */,
 				052AA81E7E3A97274E587F13 /* StateScenario.swift in Sources */,
 				90D982AE3678217B89A5B5FE /* TrapApp.swift in Sources */,
 			);

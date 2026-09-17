@@ -17,5 +17,5 @@ struct LazyStateChild: View {
 }
 
 #Preview("LazyState") {
-    Parent { LazyStateChild(input: $0) }
+    ParentView { LazyStateChild(input: $0) }
 }

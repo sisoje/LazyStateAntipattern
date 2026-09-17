@@ -16,5 +16,5 @@ struct StateChild: View {
 }
 
 #Preview("State") {
-    Parent { StateChild(input: $0) }
+    ParentView { StateChild(input: $0) }
 }

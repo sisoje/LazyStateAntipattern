@@ -13,5 +13,5 @@ struct MemoChild: View {
 }
 
 #Preview("Memo") {
-    Parent { MemoChild(input: $0) }
+    ParentView { MemoChild(input: $0) }
 }
