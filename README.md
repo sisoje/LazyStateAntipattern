@@ -79,6 +79,6 @@ are the screen's own labels. The lock holds in both directions: if a future
 - Point-Free, [`swiftui-lazy-state`](https://github.com/pointfreeco/swiftui-lazy-state):
   the value lives "at least until the view's identity changes".
 - [swift-core-flow](https://github.com/sisoje/swift-core-flow): `MemoView`
-  as public API; `QueryView` is built on it.
+  keeps a value across renders and rebuilds it only when its dependencies change.
 - [SwiftUI Data Flow Masterclass](https://medium.com/@redhotbits/swiftui-data-flow-masterclass-099f0768f776):
   data enters a node at creation; dependency-tracked invalidation.
