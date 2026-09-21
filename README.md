@@ -1,4 +1,6 @@
-# LazyState: Point-Free's newest antipattern
+# LazyState: Point-Free's newest antipattern, and how to fix it
+
+[![UI tests](https://github.com/sisoje/LazyStateAntipattern/actions/workflows/ui-tests.yml/badge.svg)](https://github.com/sisoje/LazyStateAntipattern/actions/workflows/ui-tests.yml)
 
 *Built on a premise SwiftUI already rejects: state seeded from a parent's
 value. Three UI tests show what it costs.*
@@ -70,10 +72,10 @@ updated by other means, such as using `onChange(of:)` or `task(id:)` in the
 view, or changing the view's identity." The data flow is left to repairs.
 
 The usual defence is that state is meant to behave this way: the child owns
-its source of truth, and the parent only seeds it. But the value was never the child's.
-A copy the child controls is a duplicated source of truth, and a `Binding`
-does not help: it shares the value, it does not rebuild a model derived from
-it.
+its source of truth, and the parent only seeds it. But the value was never the
+child's. A copy the child controls is a duplicated source of truth, and a
+`Binding` does not help: it shares the value, it does not rebuild a model
+derived from it.
 
 ## The measurement
 
@@ -112,8 +114,9 @@ whole subtree, `onChange(of:)` patches state a render late.
 ## The correct way
 
 **The correct way to create the model within the child is a Memo keyed by the
-input**: the second way, packaged. The first way needs no machinery and is not
-measured here.
+input**: the second way above, packaged as a view. `MemoView` is inlined in
+`App/MemoView.swift`, so the demo needs no dependency for it. The first way
+needs no machinery and is not measured here.
 
 ```swift
 MemoView(Model(input: input), dependencies: [input]) { model in … }  // MemoChild
@@ -161,7 +164,7 @@ private func run(scenario: String, modelInput: Int, modelsCreated: Int) {
 are the screen's own labels. The lock holds in both directions: if a future
 `@LazyState` starts following the input, its row fails.
 
-Run it: `xcodegen generate`, then the `TrapUITests` in `LazyStateTrap.xcodeproj`.
+Run it: `xcodegen generate`, then the `TrapUITests` target in `LazyStateTrap.xcodeproj`.
 Needs Xcode 27 (Point-Free's package is swift-tools 6.4); the deployment
 target is iOS 26.
 
@@ -179,7 +182,7 @@ target is iOS 26.
 - React, [`useMemo`](https://react.dev/reference/react/useMemo): the same
   Memo, a value kept across renders and rebuilt only when a listed dependency
   changes.
-- [swift-core-flow](https://github.com/sisoje/swift-core-flow): `MemoView`
-  keeps a value across renders and rebuilds it only when its dependencies change.
+- [swift-core-flow](https://github.com/sisoje/swift-core-flow): `MemoView`,
+  the SwiftUI counterpart of `useMemo`.
 - [SwiftUI Data Flow Masterclass](https://medium.com/@redhotbits/swiftui-data-flow-masterclass-099f0768f776):
   data enters a node at creation; dependency-tracked invalidation.
