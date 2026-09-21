@@ -1,0 +1,22 @@
+name: UI tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ui-tests:
+    # Point-Free's LazyState is swift-tools 6.4, which needs Xcode 27;
+    # macos-latest (macOS 26) ships only Xcode 26.
+    runs-on: xcode-27
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run UI tests
+        run: |
+          xcodebuild test \
+            -project LazyStateTrap.xcodeproj \
+            -scheme TrapApp \
+            -destination 'platform=iOS Simulator,name=iPhone 17' \
+            -skipMacroValidation
