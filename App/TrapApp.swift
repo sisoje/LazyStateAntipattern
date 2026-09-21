@@ -11,6 +11,7 @@ struct TrapApp: App {
             switch scenario {
             case "state": ParentView { StateChild(input: $0) }
             case "lazyState": ParentView { LazyStateChild(input: $0) }
+            // "memo", and a plain launch with no scenario set.
             default: ParentView { MemoChild(input: $0) }
             }
         }
