@@ -1,10 +1,12 @@
-# The Lazy State Trap — the newest antipattern from Point-Free
+# LazyState: Point-Free's newest antipattern
 
 *Built on a premise SwiftUI already rejects: state seeded from a parent's
 value. Three UI tests show what it costs.*
 
 > "Many real models cannot be created with a static inline default. They need
-> data from the parent view." — Point-Free, [LazyState 1.0](https://www.pointfree.co/blog/posts/228-lazystate-1-0-now-available-to-everyone)
+> data from the parent view."
+>
+> Point-Free, [LazyState 1.0](https://www.pointfree.co/blog/posts/228-lazystate-1-0-now-available-to-everyone)
 
 ```swift
 struct Child: View {
@@ -38,9 +40,11 @@ tells you not to write: "You don't call this initializer directly."**
 Fix the data flow instead. There are two ways to remove the second source of
 truth:
 
-1. **Up: create it on the event.** The opposite of what most people do: the
-   mutation that changes the input builds the model, and the parent passes it
-   down. The child stays dumb; the parent knows how to build its model.
+1. **Up: create it on the event.** The opposite of what most people do. A view
+   struct's `init` runs on every parent render, but a node enters the graph
+   once, on a mutation. That mutation, or the one that changes the input,
+   builds the model, and the parent passes it down. The child stays dumb; the
+   parent knows how to build its model.
 2. **Down: derive it by dependencies.** The model stays in the child, derived
    instead of seeded: the parent passes only the value, and the model should be
    rebuilt when that value changes, kept otherwise. The parent stays dumb; the
@@ -64,6 +68,12 @@ Their README concedes it: "Once a view's state is initialized it cannot be
 updated from the outside by providing a new parameter. The state must be
 updated by other means, such as using `onChange(of:)` or `task(id:)` in the
 view, or changing the view's identity." The data flow is left to repairs.
+
+The usual defence is that state is meant to behave this way: the child owns
+its source of truth, and the parent only seeds it. But the value was never the child's.
+A copy the child controls is a duplicated source of truth, and a `Binding`
+does not help: it shares the value, it does not rebuild a model derived from
+it.
 
 ## The measurement
 
