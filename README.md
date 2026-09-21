@@ -176,6 +176,9 @@ target is iOS 26.
   truth. Duplicated source of truth can lead to bug and inconsistency."
 - Point-Free, [`swiftui-lazy-state`](https://github.com/pointfreeco/swiftui-lazy-state):
   the value lives "at least until the view's identity changes".
+- React, [`useMemo`](https://react.dev/reference/react/useMemo): the same
+  Memo, a value kept across renders and rebuilt only when a listed dependency
+  changes.
 - [swift-core-flow](https://github.com/sisoje/swift-core-flow): `MemoView`
   keeps a value across renders and rebuilds it only when its dependencies change.
 - [SwiftUI Data Flow Masterclass](https://medium.com/@redhotbits/swiftui-data-flow-masterclass-099f0768f776):
